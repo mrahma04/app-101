@@ -1,14 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  function getDate() {
+    const today = new Date();
+    const month = today.getMonth() + 1;
+    const date = today.getDate();
+    const year = today.getDate();
+    return `${month}/${date}/${year}`;
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <p>app-101</p>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -17,6 +23,8 @@ function App() {
         >
           Learn React
         </a>
+        <p>{getDate()}</p>
+        <div>Hola!</div>
       </header>
     </div>
   );
